@@ -6,6 +6,14 @@ from random import randint, choice as rand_choice
 
 __author__ = 'Dan Mudie'
 
+
+#add sounds - first cut
+import pygame
+pygame.init()
+hit_sound = pygame.mixer.Sound("sounds/explosion-01.wav")
+miss_sound = pygame.mixer.Sound("sounds/beach-wave-01.wav")
+
+
 class Coord(object):
     """A class to represent an x,y position on the gameboard."""
 
@@ -260,7 +268,11 @@ class Gameboard(object):
         for ship in self.ships:
             if pos in ship.points.keys():
                 ship.points[pos] = HIT
-                if verbose: print("Hit!")
+                if verbose: 
+                   print("Hit!")
+                pygame.mixer.Sound.play(hit_sound)
+                pygame.mixer.music.stop()
+
                 #check if all points in the ship have been HIT
                 if NOT_HIT not in ship.points.values():
                     ship.sunk = True
@@ -281,6 +293,8 @@ class Gameboard(object):
 
         #if we got here, the shot must be a miss
         if verbose: print("Miss!")
+        pygame.mixer.Sound.play(miss_sound)
+        pygame.mixer.music.stop()
         self.misses.append(pos)
         return False
 
