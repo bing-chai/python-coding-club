@@ -1,0 +1,3 @@
+[submodule "base-python-curriculum"]
+	path = base-python-curriculum
+	url = https://github.com/rmotr-curriculum/base-python-curriculum.git
