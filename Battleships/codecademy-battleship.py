@@ -9,7 +9,7 @@ def print_board(board):
   for row in board:
     print " ".join(row)
 
-print_board(board)
+# print_board(board)
 
 def random_row(board):
   return randint(0, len(board) - 1)
@@ -26,6 +26,7 @@ ship_col = random_col(board)
 # don't forget to properly indent!
 for turn in range(4):
   print "Turn", turn + 1
+  print_board(board)
   guess_row = int(raw_input("Guess Row: "))
   guess_col = int(raw_input("Guess Col: "))
 
