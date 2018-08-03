@@ -1,39 +1,39 @@
 # my first notepad commit!!!
-<<<<<<< HEAD
 """
 My first class assignment about classes
 """
+import random
+import time
 
-class MyClass:
+class BadmintonPlayer():
+    # creates player and holds stats and moves
+
     def __init__(self):
-        container1 = []
-        container2 = {}
-        container3 = ""
+        self.player_name = ""
+        self.player_age = ""
+        self.player_category= ""
+        self.stamina = 10
+
+    def __str__(self):
+        return("---\n"+
+                f"{self.name}\'s stats are:\n"+
+                f"Stamina:{self.stamina}\n"+
+                "---"
+                )
+
+    def badminton_hit():
+        damage =
 
     def screenprint(self):
         this_string = "placeholder"
         print(this_string)
 
 
-this_string = "A string"
-MyClass.screenprint(this_string)
-=======
-# my first class
 
-class BadmintonPlayer():
-  def __init__(self, name, age, gender):
-      self.name = name
-      self.age = age
-      self.gender = gender
+Player1 = BadmintonPlayer()
+Player2 = BadmintonPlayer()
 
-  def skills(forehand, backhand):
-      skills.forehand = 1
-      skills.backhand = 1
-
-  def movement(speed, agility):
-      movement.speed = 1
-      movement.agility = 1
-
-      
-
->>>>>>> b4e663e6cb9e3001a0aa13183030c887498d26c9
+while match_points < 5:
+    print(f"{Player1.name} serves!")
+    print(f"{Player2.name} serves!")
+    time.sleep(2)

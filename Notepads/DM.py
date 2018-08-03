@@ -47,6 +47,7 @@ class Hero:
             opponent.health -= r.randint(5,15)/10.0 * self.super_attack_strength
             self.super_attacks_left -= 1
 
+#game logic start
 
 bad_guys = []
 bad_guys.append(Troll())
