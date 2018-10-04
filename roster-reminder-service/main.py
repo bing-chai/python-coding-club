@@ -1,4 +1,4 @@
-import database as db
+;
 import sheets as sh
 import email as em
 import datetime
